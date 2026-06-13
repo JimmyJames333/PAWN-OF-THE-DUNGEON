@@ -1,16 +1,12 @@
 class UIScene extends Phaser.Scene {
-    constructor() {
-        super("UIScene");
-    }
+  constructor() {
+    super('UIScene');
+  }
 
-    create() {
-        this.corruptionText = this.add.text(10, 10, "Corruption: 0", {
-            fontSize: "20px",
-            fill: "#ffffff"
-        });
-
-        this.game.events.on("corruptionChanged", (value) => {
-            this.corruptionText.setText("Corruption: " + value);
-        });
-    }
+  create() {
+    this.add.text(20, 20, 'UI Layer Active', {
+      fontSize: '20px',
+      color: '#ffffff'
+    });
+  }
 }
